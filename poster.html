@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film Poster</title>
-    <link rel="stylesheet" href="./poster_style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Film Poster</title>
+  <!-- Memuat file CSS yang telah kamu sediakan -->
+  <link rel="stylesheet" href="./yes_style.css">
 </head>
 <body>
-    <div class="poster_container">
-        <h2>Nah ws udah real yang mana</h2>
-        <!-- Ganti URL di bawah ini dengan link poster film yang diinginkan -->
-        <img src="Poster.webp/300x450.png?text=Poster+Film" alt="Film Poster" class="film_poster">
-        <div class="option_buttons">
-            <button id="ayoBtn">ayo</button>
-            <button id="oraWesBtn">ora wes</button>
-        </div>
-        <!-- Tempat menampilkan pilihan pengguna -->
-        <div id="result" style="margin-top:20px; font-weight: bold;"></div>
+  <div class="poster_container">
+    <!-- Gunakan class header_text agar style dari CSS diterapkan -->
+    <h2 class="header_text">Nah ws udah real yang mana</h2>
+    <!-- Ganti src di bawah ini dengan URL poster film yang diinginkan -->
+    <img src="Poster.webp" alt="Film Poster" class="film_poster">
+    
+    <!-- Container tombol menggunakan kelas "buttons" agar sesuai dengan CSS -->
+    <div class="buttons">
+      <button class="btn" id="yesButton">Ayo</button>
+      <button class="btn" id="noButton">Nggak wes</button>
     </div>
+    
+    <!-- Tempat menampilkan pilihan pengguna -->
+    <div id="result" style="margin-top:20px; font-weight: bold;"></div>
+  </div>
 
-    <script>
-        // Ketika tombol "ayo" diklik
-        document.getElementById('ayoBtn').addEventListener('click', function() {
-            document.getElementById('result').textContent = "Chat https://wa.me/qr/R66SUMZE6Z5XK1 dengan kode /y";
-            console.log("User selected: ayo");
-        });
+  <script>
+    // Event listener untuk tombol "Ayo" (Yes)
+    document.getElementById('yesButton').addEventListener('click', function() {
+      document.getElementById('result').textContent = "Yes: Chat https://wa.me/qr/R66SUMZE6Z5XK1 dengan kode /y";
+      console.log("User selected: Yes (Ayo)");
+    });
 
-        // Ketika tombol "ora wes" diklik
-        document.getElementById('oraWesBtn').addEventListener('click', function() {
-            document.getElementById('result').textContent = "Chat https://wa.me/qr/R66SUMZE6Z5XK1 dengan kode /n";
-            console.log("User selected: ora wes");
-        });
+    // Event listener untuk tombol "Nggak wes" (No)
+    document.getElementById('noButton').addEventListener('click', function() {
+      document.getElementById('result').textContent = "No: Chat https://wa.me/qr/R66SUMZE6Z5XK1 dengan kode /n";
+      console.log("User selected: No (Nggak wes)");
+   });
     </script>
 </body>
 </html>
