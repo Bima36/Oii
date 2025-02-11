@@ -12,8 +12,13 @@
         <!-- Ganti URL di bawah ini dengan link poster film yang diinginkan -->
         <img src="52fa8458-8ba0-44c3-8e4a-6aa27e6840e7-600x885.webp" alt="Film Poster" class="film_poster">
         <div class="option_buttons">
-            <button id="ayoBtn">ayo</button>
-            <button id="oraWesBtn">ora wes</button>
+                <button class="btn" id = "yesButton" onclick="nextPage()">Ayo</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">Nggak wes</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
         </div>
         <!-- Tempat menampilkan pilihan pengguna -->
         <div id="result" style="margin-top:20px; font-weight: bold;"></div>
@@ -22,13 +27,13 @@
     <script>
         // Ketika tombol "ayo" diklik
         document.getElementById('ayoBtn').addEventListener('click', function() {
-            document.getElementById('result').textContent = "Kamu memilih: ayo";
+            document.getElementById('result').textContent = "Chat https://wa.me/qr/R66SUMZE6Z5XK1 dengan kode /y";
             console.log("User selected: ayo");
         });
 
         // Ketika tombol "ora wes" diklik
         document.getElementById('oraWesBtn').addEventListener('click', function() {
-            document.getElementById('result').textContent = "Kamu memilih: ora wes";
+            document.getElementById('result').textContent = "Chat https://wa.me/qr/R66SUMZE6Z5XK1 dengan kode /n";
             console.log("User selected: ora wes");
         });
     </script>
