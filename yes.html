@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Utama</title>
-    <link rel="stylesheet" href="./yes_style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Utama</title>
+  <link rel="stylesheet" href="./yes_style.css">
 </head>
 <body>
-    <div class="container">
-        <div>
-            <h1 class="header_text">Hurrayyyy!! Wkwkwk Bercandaa!</h1>
-        </div>
-        <div class="gif_container">
-            <img src="https://media0.giphy.com/media/T86i6yDyOYz7J6dPhf/giphy.gif" alt="Cute animated illustration">
-        </div>
-        <!-- Tombol untuk menuju halaman poster -->
-        <div class="button_container">
-                <button class="btn" id = "yesButton" onclick="nextPage()">Serius</button>
-                <script>
-                    function nextPage() {
-                        window.location.href = "poster.html";
-                    }
-                    
+  <div class="container">
+    <div>
+      <h1 class="header_text">Hurrayyyy!! Wkwkwk Bercandaa!</h1>
+    </div>
+    <div class="gif_container">
+      <img src="https://media0.giphy.com/media/T86i6yDyOYz7J6dPhf/giphy.gif" alt="Cute animated illustration">
+    </div>
+    <!-- Tombol dengan style yang sama seperti contoh kedua -->
+    <div class="buttons">
+      <button class="btn" id="yesButton" onclick="nextPage()">Serius</button>
+    </div>
+  </div>
+
+  <script>
+    function nextPage() {
+      window.location.href = "poster.html";
+    }
+  </script>
+</body>
+</html>
