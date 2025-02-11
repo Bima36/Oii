@@ -35,17 +35,6 @@
     document.getElementById('noButton').addEventListener('click', function() {
       document.getElementById('result').textContent = "No: Chat https://wa.me/qr/R66SUMZE6Z5XK1 dengan kode /n";
       console.log("User selected: No (Nggak wes)");
-    });
-
-    // Fungsi moveButton untuk menggerakkan tombol "Nggak wes" secara acak
-    function moveButton() {
-      var noButton = document.getElementById('noButton');
-      var maxX = window.innerWidth - noButton.offsetWidth;
-      var maxY = window.innerHeight - noButton.offsetHeight;
-      var randomX = Math.floor(Math.random() * maxX);
-      var randomY = Math.floor(Math.random() * maxY);
-      noButton.style.left = randomX + "px";
-      noButton.style.top = randomY + "px";
     }
   </script>
 </body>
