@@ -1,55 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Film Poster</title>
-  <link rel="stylesheet" href="./yes_style.css" />
-  <style>
-    /* Style tambahan jika diperlukan */
-    .option_buttons {
-      position: relative; /* Wadah tombol relatif terhadap container */
-    }
-    .btn {
-      position: relative; /* Mulai dengan posisi relative, lalu akan diubah menjadi absolute pada tombol No */
-    }
-  </style>
+  <!-- Memuat file CSS yang telah kamu sediakan -->
+  <link rel="stylesheet" href="./yes_style.css">
 </head>
 <body>
   <div class="poster_container">
-    <h2>Nah ws udah real yang mana</h2>
-    <!-- Ganti URL src di bawah ini dengan link poster film yang diinginkan -->
-    <img src="52fa8458-8ba0-44c3-8e4a-6aa27e6840e7-600x885.webp" alt="Film Poster" class="film_poster" />
-    <div class="option_buttons">
-      <!-- Menggunakan id "yesBtn" untuk Yes dan "noBtn" untuk No -->
-      <button class="btn" id="yesBtn">Ayo</button>
-      <button class="btn" id="noBtn" onmouseover="moveButton()">Nggak wes</button>
+    <!-- Gunakan class header_text agar style dari CSS diterapkan -->
+    <h2 class="header_text">Nah ws udah real yang mana</h2>
+    <!-- Ganti src di bawah ini dengan URL poster film yang diinginkan -->
+    <img src="52fa8458-8ba0-44c3-8e4a-6aa27e6840e7-600x885.webp" alt="Film Poster" class="film_poster">
+    
+    <!-- Container tombol menggunakan kelas "buttons" agar sesuai dengan CSS -->
+    <div class="buttons">
+      <button class="btn" id="yesButton">Ayo</button>
+      <button class="btn" id="noButton" onmouseover="moveButton()">Nggak wes</button>
     </div>
+    
     <!-- Tempat menampilkan pilihan pengguna -->
     <div id="result" style="margin-top:20px; font-weight: bold;"></div>
   </div>
 
   <script>
     // Event listener untuk tombol "Ayo" (Yes)
-    document.getElementById('yesBtn').addEventListener('click', function() {
+    document.getElementById('yesButton').addEventListener('click', function() {
       document.getElementById('result').textContent = "Yes: Chat https://wa.me/qr/R66SUMZE6Z5XK1 dengan kode /y";
       console.log("User selected: Yes (Ayo)");
     });
 
     // Event listener untuk tombol "Nggak wes" (No)
-    document.getElementById('noBtn').addEventListener('click', function() {
+    document.getElementById('noButton').addEventListener('click', function() {
       document.getElementById('result').textContent = "No: Chat https://wa.me/qr/R66SUMZE6Z5XK1 dengan kode /n";
       console.log("User selected: No (Nggak wes)");
     });
 
     // Fungsi untuk menggerakkan tombol "Nggak wes" secara acak saat kursor berada di atasnya
     function moveButton() {
-      var noButton = document.getElementById('noBtn');
+      var noButton = document.getElementById('noButton');
       var maxX = window.innerWidth - noButton.offsetWidth;
       var maxY = window.innerHeight - noButton.offsetHeight;
       var randomX = Math.floor(Math.random() * maxX);
       var randomY = Math.floor(Math.random() * maxY);
-      noButton.style.position = "absolute";
       noButton.style.left = randomX + "px";
       noButton.style.top = randomY + "px";
     }
